@@ -1,0 +1,45 @@
+
+#server:
+#  port: 8080
+#  
+#spring:
+#  datasource:
+#    url: jdbc:mysql://103.143.242.168:3306/vms_db
+#    username: vms_db
+#    password: vms_db123
+#    
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#
+#
+#  jpa:
+#    properties:
+#      hibernate:
+#        dialect: org.hibernate.dialect.MySQL5Dialect
+#    show-sql: true
+#    hibernate:
+#      ddl-auto: update
+
+#server:
+#  port: 8080
+#  
+spring:
+  datasource:
+    url: jdbc:sqlite:file:myDb.db?cache=shared
+    username: root
+    password: root
+    #driver-class-name: org.sqlite.JDBC
+
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.sqlite.hibernate.dialect.SQLiteDialect
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    database-platform: com.springboot.sqlite.SQLDialect
+    
+  banner:
+    location: banner.txt
+    
+application.title: Login With Sequrity
+application.version: 0.0.1
